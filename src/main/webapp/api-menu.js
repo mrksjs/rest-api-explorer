@@ -33,7 +33,7 @@ function processYamlFileURL(fileURL) {
                if(idElements.length > 1)
                {
                   var yamlId = idElements[1].trim();
-                  addItemToMenu(yamlId);
+                  addItemToMenu(yamlId, fileURL);
                }
                
             }
