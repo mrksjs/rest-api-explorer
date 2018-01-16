@@ -19,7 +19,7 @@ public class RestApiProcessor
      * @return
      * @throws Exception
      */
-    private RestApiDefinition getApiInfo(File file) throws Exception
+    public static RestApiDefinition getApiInfo(File file) throws Exception
     {
         Properties properties = new Properties();
         properties.load(new FileReader(file));
@@ -29,7 +29,14 @@ public class RestApiProcessor
         
         RestApiDefinition info = new RestApiDefinition();
         info.setId(id);
-        info.setOrder(Integer.parseInt(order));
+        System.out.println(id);
+        try {
+        	info.setOrder(Integer.parseInt(order));
+        } 
+        catch (NumberFormatException nfe) {
+        	// ignore this here 
+        	info.setOrder(Integer.MAX_VALUE);
+        }
         return info;
     }
 }
