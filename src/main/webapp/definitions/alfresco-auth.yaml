@@ -1,5 +1,6 @@
 swagger: '2.0'
 info:
+  apiId: Authentication API
   description: |
     **Authentication API**
 

@@ -1,5 +1,6 @@
 swagger: '2.0'
 info:
+  apiId: Workflow API
   description: |
     **Workflow API**
 
